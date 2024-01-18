@@ -1,22 +1,21 @@
-function XO(str) {
+function XO(str){
     str = str.toLowerCase();
 
     let countX = 0;
     let countO = 0;
 
     for (let char of str) {
-        if (char === 'x') {
+        if(char === 'x') {
             countX++;
         } else if (char === 'o') {
             countO++;
         }
     }
 
-    return countX == countO;
+    return countX === countO;
 }
 
-console.log(XO("ooxx"));
-console.log(XO("zzoo"));
+console.log(XO("xxoo"));
 
 // Examples input/output:
 XO("ooxx") // => true
