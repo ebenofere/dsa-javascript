@@ -4,23 +4,23 @@
 
 
 // SOLUTION
-var array = ["Messi", "Haaland", "Mbappe", "Osimhen", "De Bruyne", "Benzema", "Modric"];
+// let array = ["Messi", "Haaland", "Mbappe", "Osimhen", "De Bruyne", "Benzema", "Modric"];
 
-var number = (array) => {
-    return array.map((item, index) => {
-        return `${index + 1}: ${item}`
-    });
-};
+// let number = (array) => {
+//     return array.map((item, index) => {
+//         return `${index + 1}: ${item}`
+//     });
+// };
 
-// Test cases
-console.log(number([]));
-console.log(number(array));
+// // Test cases
+// console.log(number([]));
+// console.log(number(array));
 
 
 // OTHER SOLUTIONS 
-var number = array.map((item, index) => `${index + 1}: ${item}`);
+// let number = array.map((item, index) => `${index + 1}: ${item}`);
  
-console.log(number);
+// console.log(number);
 
 
 
@@ -40,44 +40,44 @@ console.log(number);
 
 
 // SOLUTION
-function XO(str) {
-    // Convert the string to lowercase to make the comparison case-insensitive
-    str = str.toLowerCase();
+// function XO(str) {
+//     // Convert the string to lowercase to make the comparison case-insensitive
+//     str = str.toLowerCase();
   
-    // Initialize counters for 'x' and 'o'
-    let countX = 0;
-    let countO = 0;
+//     // Initialize counters for 'x' and 'o'
+//     let countX = 0;
+//     let countO = 0;
   
-    // Iterate through each character in the string
-    for (let char of str) {
-      // Increment the respective counter based on the character
-      if (char === 'x') {
-        countX++;
-      } else if (char === 'o') {
-        countO++;
-      }
-    }
+//     // Iterate through each character in the string
+//     for (let char of str) {
+//       // Increment the respective counter based on the character
+//       if (char === 'x') {
+//         countX++;
+//       } else if (char === 'o') {
+//         countO++;
+//       }
+//     }
   
-    // Check if the counts of 'x' and 'o' are equal
-    return countX === countO;
-}
+//     // Check if the counts of 'x' and 'o' are equal
+//     return countX === countO;
+// }
   
-  // Test cases
-  console.log(XO("ooxx"));    // true
-  console.log(XO("xooxx"));   // false
-  console.log(XO("ooxXm"));   // true
-  console.log(XO("zpzpzpp"));  // true
-  console.log(XO("zzoo"));     // false
+//   // Test cases
+//   console.log(XO("ooxx"));    // true
+//   console.log(XO("xooxx"));   // false
+//   console.log(XO("ooxXm"));   // true
+//   console.log(XO("zpzpzpp"));  // true
+//   console.log(XO("zzoo"));     // false
   
 
-  // SOLUTION
-  const XO = str => {
-    str = str.toLowerCase().split('');
-    return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
-  }
+//   // SOLUTION
+//   const XO = str => {
+//     str = str.toLowerCase().split('');
+//     return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+//   }
 
   
-// SOLUTION
-  function XO(str) {
-    return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
-}
+// // SOLUTION
+//   function XO(str) {
+//     return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+// }
