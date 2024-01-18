@@ -1,21 +1,10 @@
-function XO(str){
-    str = str.toLowerCase();
-
-    let countX = 0;
-    let countO = 0;
-
-    for (let char of str) {
-        if(char === 'x') {
-            countX++;
-        } else if (char === 'o') {
-            countO++;
-        }
-    }
-
-    return countX === countO;
+const XO = (str) => {
+    str = str.toLowerCase().split('');
+    return str.filter(x => x === 'x').length == str.filter(x => x === 'o').length;
 }
 
 console.log(XO("xxoo"));
+
 
 // Examples input/output:
 XO("ooxx") // => true
