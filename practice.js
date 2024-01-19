@@ -1,9 +1,22 @@
-const XO = (str) => {
-    str = str.toLowerCase().split('');
-    return str.filter(x => x === 'x').length == str.filter(x => x === 'o').length;
-}
+ function XO(str) {
+    // set incoming parameter to lowercase
+    str = str.toLowerCase();
+    countX = 0;
+    countO = 0;
 
-console.log(XO("xxoo"));
+    // for loop
+    for (let item of str) {
+        if (item === "x") {
+            countX++;
+        } else if (item === "o") {
+            countO++;
+        }
+    }
+
+    return countX == countO;
+ } 
+
+ console.log(XO("xxow"));
 
 
 // Examples input/output:
