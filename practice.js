@@ -1,27 +1,25 @@
- function XO(str) {
-    // set incoming parameter to lowercase
-    str = str.toLowerCase();
-    countX = 0;
-    countO = 0;
+// const XO = (str) => {
+//     return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+// }
 
-    // for loop
-    for (let item of str) {
-        if (item === "x") {
-            countX++;
-        } else if (item === "o") {
-            countO++;
-        }
+// // Examples input/output:
+// console.log(XO("ooxx")); // => true
+// console.log(XO("xooxx")); // => false
+// console.log(XO("ooxXm")); // => true
+// console.log(XO("zpzpzpp")); // => true // when no 'x' and 'o' is present should return true
+// console.log(XO("zzoo")); // => false
+
+
+function divisors(integer) {
+    let r = []
+    for(let i = 2; i<integer; i++){
+      if(integer%i == 0) r.push(i)
     }
+    let res = r.length !== 0 ? r : `${integer} is prime`
+    return res
+}
 
-    return countX == countO;
- } 
-
- console.log(XO("xxow"));
-
-
-// Examples input/output:
-XO("ooxx") // => true
-XO("xooxx") // => false
-XO("ooxXm") // => true
-XO("zpzpzpp") // => true // when no 'x' and 'o' is present should return true
-XO("zzoo") // => false
+console.log(divisors(12));
+console.log(divisors(13));
+console.log(divisors(85));
+console.log(divisors(60));
